@@ -305,4 +305,29 @@ public class TileBoard : MonoBehaviour
 
         return false;
     }
+
+    public void RestartGame()
+    {
+        foreach (Tile tile in tiles)
+        {
+            Destroy(tile.gameObject);
+        }
+
+        tiles.Clear();
+        mergedTiles.Clear();
+
+        for (int y = 0; y < grid.Rows.Count(); y++)
+        {
+            for (int x = 0; x < grid.Rows[y].Cells.Count(); x++)
+            {
+                TileCell tileCell = grid.Rows[y].Cells[x];
+
+                tileCell.SetTile(null);
+            }
+        }
+
+
+        CreateTile();
+        CreateTile();
+    }
 }

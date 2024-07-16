@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public event EventHandler OnGameOver;
+
     public static GameManager Instance { get; private set; }
 
     [SerializeField]
@@ -28,20 +31,34 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (!board.IsBusy )
+        if (IsGameOver)
+        {
+            return;
+        }
+
+        if (!board.IsBusy)
         {
             if (board.IsGameOverCheck())
-                Debug.Log("Game Over");
-            else
             {
-                board.HandleInput();
+                IsGameOver = true;
+                Debug.Log("game over");
+                OnGameOver?.Invoke(this, EventArgs.Empty);
             }
-        } 
+
+            board.HandleInput();
+        }
+
+        //if (Input.GetKeyDown(KeyCode.E)) {
+        //    IsGameOver = true;
+        //    Debug.Log("game over");
+        //    OnGameOver?.Invoke(this, EventArgs.Empty);
+        //}
+
     }
 
-    
-
-    public void SetGameOver(bool isGameOver) { 
-        IsGameOver = isGameOver;
+    public void RestartGame()
+    {
+        board.RestartGame(); 
+        IsGameOver = false;
     }
 }
