@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552cb928f8ea2e641b224de427066142, type: 3}
+  m_Name: TileStateListSO
+  m_EditorClassIdentifier: 
+  list:
+  - {fileID: 11400000, guid: 276c7424b94823a41839d1d3821bcf27, type: 2}
+  - {fileID: 11400000, guid: 8dea11db667fe284d9b254bdd907b816, type: 2}
+  - {fileID: 11400000, guid: 39673be7490fb2f4d8270a486a768a94, type: 2}
+  - {fileID: 11400000, guid: fc2764b67fedde44c96a07c04029673d, type: 2}
+  - {fileID: 11400000, guid: d6b2608e9fc771d4e9cf655635f01c29, type: 2}
+  - {fileID: 11400000, guid: f490329c2e87e7a44909ba97298648dd, type: 2}
+  - {fileID: 11400000, guid: 6cdec4c1d13915849a1dda44a89e1769, type: 2}
+  - {fileID: 11400000, guid: 5bf99a9c5a1c24b469598898d146570d, type: 2}
+  - {fileID: 11400000, guid: 99fb29408cc494a45866bb9bafe88f70, type: 2}
+  - {fileID: 11400000, guid: fe68178ded291064eae38c43531010bd, type: 2}
